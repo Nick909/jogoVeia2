@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentActivity"
+    android:background="#0025FF">
+
+
+    <TextView
+        android:id="@+id/txtCardNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Card"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Name"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/txtCardNum"
+        tools:layout_editor_absoluteX="26dp" />
+
+    <TextView
+        android:id="@+id/txtSecurityCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="Code"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/txtName"
+        tools:layout_editor_absoluteX="26dp" />
+
+    <EditText
+        android:id="@+id/edtSecurityCode"
+        android:layout_width="373dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/edtName"
+        app:layout_constraintTop_toBottomOf="@+id/txtSecurityCode" />
+
+    <EditText
+        android:id="@+id/edtCardNum"
+        android:layout_width="377dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:textColor="#FFFFFF"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/txtCardNum"
+        tools:layout_editor_absoluteX="26dp" />
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="376dp"
+        android:layout_height="53dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/edtCardNum"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <EditText
+        android:id="@+id/edtBrand"
+        android:layout_width="372dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:textColor="#FFFFFF"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/edtSecurityCode"
+        app:layout_constraintTop_toBottomOf="@+id/txtBrand" />
+
+    <TextView
+        android:id="@+id/txtBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="Brand"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/txtSecurityCode"
+        tools:layout_editor_absoluteX="26dp" />
+
+    <Button
+        android:id="@+id/btnPay"
+        android:layout_width="128dp"
+        android:layout_height="53dp"
+        android:layout_margin="16dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="40dp"
+        android:onClick="pay"
+        android:text="Pay"
+        android:textColor="#FFFFFF"
+        android:background="#FFC700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtBrand" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="131dp"
+        android:layout_height="54dp"
+        android:layout_margin="16dp"
+        android:layout_marginStart="4dp"
+        android:text="Back Pay"
+        android:textColor="#FFFFFF"
+        android:background="#FFC700"
+        app:layout_constraintEnd_toStartOf="@+id/btnPay"
+        app:layout_constraintHorizontal_bias="0.308"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtBrand" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
